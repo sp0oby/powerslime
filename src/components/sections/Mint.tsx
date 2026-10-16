@@ -1,15 +1,22 @@
 import { MINT } from "@/data/lore";
 
 const GALLERY = [
+  { src: "/art/pyros.webp", cap: "Ignivar · Pyros" },
   { src: "/art/pelagos.jpg", cap: "House of Pelagos" },
-  { src: "/art/fulgur.jpg", cap: "Fulgur · the devoured" },
+  { src: "/art/umbra.webp", cap: "Nyxaris · Umbra" },
+  { src: "/art/fulgur.jpg", cap: "Keraunos · Fulgur" },
+  { src: "/art/lumen.webp", cap: "Aurexis · Lumen" },
+  { src: "/art/miasma.webp", cap: "Venefica · Miasma" },
   { src: "/art/ichor.jpg", cap: "House of Ichor" },
-  { src: "/art/chronos.jpg", cap: "House of Chronos" },
-  { src: "/art/aether.jpg", cap: "House of Aether" },
+  { src: "/art/aether.webp", cap: "Astraeus · Aether" },
+  { src: "/art/lithos.webp", cap: "Chthonius · Lithos" },
+  { src: "/art/anemos.webp", cap: "Zephyrion · Anemos" },
+  { src: "/art/onus.webp", cap: "Barython · Onus" },
+  { src: "/art/chronos.webp", cap: "Kairos · Chronos" },
   { src: "/art/lysis.jpg", cap: "House of Lysis" },
+  { src: "/art/aether-member.jpg", cap: "House of Aether" },
   { src: "/art/wip-3.jpg", cap: "From the desk" },
   { src: "/art/wip-1.jpg", cap: "From the desk" },
-  { src: "/art/wip-2.jpg", cap: "From the desk" },
 ];
 
 export default function Mint() {

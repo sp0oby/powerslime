@@ -27,7 +27,8 @@ export interface House {
   supply: number;
   supplyWhy?: string;
   colors: [string, string]; // [body, deep]
-  art?: { img: string; video?: string };
+  // slimearch: the team confirmed this is the Slimearch, not just a house member
+  art?: { img: string; video?: string; slimearch?: boolean };
 }
 
 export const TOTAL_SUPPLY = 1200;
@@ -53,6 +54,7 @@ export const HOUSES: House[] = [
     quote: "I can't be eaten. I don't need anything past that.",
     supply: 97, supplyWhy: "poor lands, nobody to feed",
     colors: ["#ff6a1f", "#4a0c02"],
+    art: { img: "/art/pyros.webp", slimearch: true },
   },
   {
     id: "lithos", no: "05", element: "Earth", power: "Lithos", slimearch: "Chthonius", pronoun: "he",
@@ -66,6 +68,7 @@ export const HOUSES: House[] = [
     quote: "All twelve will come to me eventually. I'll be in the same place.",
     supply: 63, supplyWhy: "smallest house by mass",
     colors: ["#b0814f", "#2a1a0c"],
+    art: { img: "/art/lithos.webp", slimearch: true },
   },
   {
     id: "ichor", no: "11", element: "Blood", power: "Ichor", slimearch: "Cruorix", pronoun: "he",
@@ -93,6 +96,7 @@ export const HOUSES: House[] = [
     quote: "I'll tell you what you're made of. What you do about it isn't my part.",
     supply: 115,
     colors: ["#fff36b", "#7a5a00"],
+    art: { img: "/art/lumen.webp", slimearch: true },
   },
   {
     id: "aether", no: "04", element: "Cosmic", power: "Aether", slimearch: "Astraeus", pronoun: "he",
@@ -106,7 +110,7 @@ export const HOUSES: House[] = [
     quote: "I'll come back and tell you whether it was worth it.",
     supply: 108,
     colors: ["#9b5cff", "#0d0630"],
-    art: { img: "/art/aether.jpg" },
+    art: { img: "/art/aether.webp", slimearch: true },
   },
   {
     id: "anemos", no: "07", element: "Wind", power: "Anemos", slimearch: "Zephyrion", pronoun: "he",
@@ -119,7 +123,8 @@ export const HOUSES: House[] = [
     hates: "Barython. Under Onus he can't move, and moving is all he has.", hatesId: "onus",
     quote: "I've taken a drop from every one of you. Go check yourselves.",
     supply: 90, supplyWhy: "a century of losing mass",
-    colors: ["#7dffe0", "#0b4a45"],
+    colors: ["#c9c2ff", "#2e2552"],
+    art: { img: "/art/anemos.webp", slimearch: true },
   },
   {
     id: "umbra", no: "03", element: "Dark", power: "Umbra", slimearch: "Nyxaris", pronoun: "she",
@@ -133,6 +138,7 @@ export const HOUSES: House[] = [
     quote: "I've never fought a war. Go count how many I've won.",
     supply: 122, supplyWhy: "nobody knows the real volume, counted at the floor",
     colors: ["#7a2bff", "#08020f"],
+    art: { img: "/art/umbra.webp", slimearch: true },
   },
   {
     id: "pelagos", no: "06", element: "Water", power: "Pelagos", slimearch: "Thalassa", pronoun: "she",
@@ -149,17 +155,18 @@ export const HOUSES: House[] = [
     art: { img: "/art/pelagos.jpg", video: "/video/pelagos.mp4" },
   },
   {
-    id: "miasma", no: "10", element: "Poison", power: "Miasma", slimearch: "Venefica", pronoun: "she",
+    id: "miasma", no: "10", element: "Poison", power: "Miasma", slimearch: "Venefica", pronoun: "he",
     etymology: "the poisoner", bloc: "deep",
-    look: "The most beautiful of the twelve. Bright, clean colors, iridescent. She looks like something you'd want to pick up.",
+    look: "The most beautiful of the twelve. Bright, clean colors, iridescent. He looks like something you'd want to pick up.",
     does: "Miasma spoils the prey. Whoever devoured her mass has her inside forever, and every generation after them comes out defective.",
-    fights: "Backwards. She doesn't defend herself, she makes herself poisonous to eat.",
+    fights: "Backwards. He doesn't defend himself, he makes himself poisonous to eat.",
     win: "Three Slimearchs carry her drop and can't get rid of it.",
     loss: "Nobody mixes with her willingly. House Miasma is dying of isolation. Not of war. People just don't come near.",
     hates: "Hermetia. The only one who can pull Miasma back out.", hatesId: "lysis",
     quote: "Eat. I'll wait.",
     supply: 76, supplyWhy: "dying of isolation",
-    colors: ["#ff3fd2", "#1b0638"],
+    colors: ["#c6ff1f", "#1f3306"],
+    art: { img: "/art/miasma.webp", slimearch: true },
   },
   {
     id: "lysis", no: "08", element: "Panacea", power: "Lysis", slimearch: "Hermetia", pronoun: "she",
@@ -187,7 +194,7 @@ export const HOUSES: House[] = [
     quote: "I'll come later. I always come later.",
     supply: 83,
     colors: ["#f2b632", "#2b1d05"],
-    art: { img: "/art/chronos.jpg" },
+    art: { img: "/art/chronos.webp", slimearch: true },
   },
   {
     id: "onus", no: "12", element: "Gravity", power: "Onus", slimearch: "Barython", pronoun: "he",
@@ -200,7 +207,8 @@ export const HOUSES: House[] = [
     hates: "Zephyrion. The only one who slips through.", hatesId: "anemos",
     quote: "Go ahead. Just not through me.",
     supply: 104,
-    colors: ["#9aa3c7", "#121426"],
+    colors: ["#ffc23d", "#141414"],
+    art: { img: "/art/onus.webp", slimearch: true },
   },
 ];
 
@@ -216,7 +224,7 @@ export const FULGUR: House = {
   quote: "",
   supply: 3, supplyWhy: "secret, reassembling",
   colors: ["#eaff3a", "#05101f"],
-  art: { img: "/art/fulgur.jpg" },
+  art: { img: "/art/fulgur.jpg", slimearch: true },
 };
 
 export const ALL_HOUSES = [...HOUSES, FULGUR];
@@ -278,7 +286,7 @@ export function mix(a: HouseId, b: HouseId): MixResult {
   if (key === "chronos+onus") return { kind: "never", name: "Still", text: "One slows, the other stops. The result doesn't move.", color: "#6b6248" };
   if (has("lysis")) return { kind: "forbidden", name: "Reversible", text: "That slime can be taken apart again. A line carrying a drop of Lysis is reversible, which makes it unreliable. Noble houses cull that offspring.", color: "#d9ffd0" };
   if (has("ichor")) return { kind: "forbidden", name: "Consumed", text: "Blood keeps devouring from inside. One generation later the carrier isn't the carrier anymore.", color: "#8a0a1e" };
-  if (has("miasma")) return { kind: "forbidden", name: "Ruined line", text: "Miasma doesn't come out. It ruins the whole line.", color: "#b13cff" };
+  if (has("miasma")) return { kind: "forbidden", name: "Ruined line", text: "Miasma doesn't come out. It ruins the whole line.", color: "#9fd61a" };
   if (has("fulgur")) return { kind: "forbidden", name: "Spark", text: "Every house already carries a piece of him. Nobody talks about it.", color: "#eaff3a" };
   const c = COMMON[key];
   if (c) return { kind: "common", ...c };

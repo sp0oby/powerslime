@@ -6,10 +6,11 @@ import Drop from "../Drop";
 import { tint } from "../SlimeCanvas";
 
 function Portrait({ h, big = false }: { h: House; big?: boolean }) {
+  const label = h.art?.slimearch ? `${h.slimearch}, Slimearch of ${h.power}` : `From the house of ${h.power}`;
   if (h.art?.video && big) {
-    return <video className="portrait" src={h.art.video} poster={h.art.img} autoPlay muted loop playsInline aria-label={`From the house of ${h.power}`} />;
+    return <video className="portrait" src={h.art.video} poster={h.art.img} autoPlay muted loop playsInline aria-label={label} />;
   }
-  if (h.art) return <img className="portrait" src={h.art.img} alt={`From the house of ${h.power}`} loading="lazy" />;
+  if (h.art) return <img className="portrait" src={h.art.img} alt={label} loading="lazy" />;
   return (
     <div className="portrait portrait--sealed">
       <Drop a={h.colors[0]} b={h.colors[1]} size={big ? 240 : 170} mood={h.id === "umbra" ? "shut" : "sleepy"} />
