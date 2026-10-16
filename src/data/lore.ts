@@ -216,6 +216,7 @@ export const FULGUR: House = {
   quote: "",
   supply: 3, supplyWhy: "secret, reassembling",
   colors: ["#eaff3a", "#05101f"],
+  art: { img: "/art/fulgur.jpg" },
 };
 
 export const ALL_HOUSES = [...HOUSES, FULGUR];

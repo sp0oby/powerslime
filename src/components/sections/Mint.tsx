@@ -2,6 +2,7 @@ import { MINT } from "@/data/lore";
 
 const GALLERY = [
   { src: "/art/pelagos.jpg", cap: "House of Pelagos" },
+  { src: "/art/fulgur.jpg", cap: "Fulgur · the devoured" },
   { src: "/art/ichor.jpg", cap: "House of Ichor" },
   { src: "/art/chronos.jpg", cap: "House of Chronos" },
   { src: "/art/aether.jpg", cap: "House of Aether" },

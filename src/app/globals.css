@@ -378,9 +378,22 @@ section { position: relative; padding: clamp(96px, 14vh, 180px) var(--gutter); }
 /* ---------- fulgur ---------- */
 .fulgur { min-height: 120vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; background: radial-gradient(ellipse at 30% 50%, #0b1f3a 0%, #030810 60%); overflow: hidden; }
 .fulgur__flash { position: absolute; inset: 0; background: #f6ffd0; opacity: 0; pointer-events: none; mix-blend-mode: screen; }
-.fulgur__core { position: relative; height: 600px; display: grid; place-items: center; }
+.fulgur__core { position: relative; height: 640px; display: grid; place-items: center; }
 .fulgur__shard { position: absolute; width: 44px; height: 72px; fill: currentColor; stroke: var(--ink); stroke-width: 1.5; filter: drop-shadow(0 0 10px currentColor); }
-.fulgur__bolt { width: 150px; height: 250px; fill: #eaff3a; stroke: var(--ink); stroke-width: 1; filter: drop-shadow(0 0 30px #eaff3a) drop-shadow(0 0 80px #7af7ff); animation: buzz 2.2s steps(1) infinite; }
+.fulgur__shard { z-index: 2; }
+.fulgur__bolt { position: absolute; z-index: 0; width: clamp(220px, 26vw, 340px); height: auto; aspect-ratio: 24 / 40; translate: 18% -4%; fill: #eaff3a; stroke: var(--ink); stroke-width: 1; filter: drop-shadow(0 0 30px #eaff3a) drop-shadow(0 0 80px #7af7ff); animation: buzz 2.2s steps(1) infinite; }
+.fulgur__portrait {
+  position: relative; z-index: 1; width: clamp(220px, 24vw, 330px); aspect-ratio: 1; rotate: -3deg;
+  border-radius: 34px; overflow: hidden; border: 4px solid var(--ink);
+  box-shadow: 0 0 0 3px #7af7ff, 0 0 40px rgba(122,247,255,.55), 0 0 120px rgba(234,255,58,.25);
+  animation: charge 3.1s steps(1) infinite;
+}
+.fulgur__portrait img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes charge {
+  0%, 82%, 100% { box-shadow: 0 0 0 3px #7af7ff, 0 0 40px rgba(122,247,255,.55), 0 0 120px rgba(234,255,58,.25); }
+  84% { box-shadow: 0 0 0 3px #eaff3a, 0 0 70px rgba(234,255,58,.9), 0 0 160px rgba(122,247,255,.6); }
+  86% { box-shadow: 0 0 0 3px #7af7ff, 0 0 20px rgba(122,247,255,.3), 0 0 60px rgba(234,255,58,.1); }
+}
 @keyframes buzz { 0%, 70%, 74%, 100% { opacity: 1; transform: none } 72% { opacity: .3; transform: translateX(4px) } 86% { transform: skewX(-4deg) } }
 .fulgur__copy { position: relative; z-index: 1; }
 .fulgur__copy p { color: #c7d7ee; max-width: 48ch; }
